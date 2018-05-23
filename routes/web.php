@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::resource('/', 'ecslController', ['only' => [
+    'index', 'show','create', 'store'
+]]);
