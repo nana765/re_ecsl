@@ -9,7 +9,7 @@
     <a class="nav-link" href="/tag">タグ検索</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="/register">図書申請</a>
+    <a class="nav-link" href="/register">登録申請</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="/admin">管理者</a>
