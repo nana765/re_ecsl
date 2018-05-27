@@ -28,7 +28,6 @@
     <label for="place">配置場所</label>
     <input type="text" name="place" class="form-control" id="place">
   </div>
-   
   <div class="form-group">
     <label for="symbol">請求記号</label>
     <input type="text" name="symbol" class="form-control" id="symbol">

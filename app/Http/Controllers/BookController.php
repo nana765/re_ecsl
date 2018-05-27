@@ -28,8 +28,8 @@ class BookController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'name' => 'required|max:128',
-            'place' => 'required',
-            'symbol' => 'required',
+            'place' => 'required|max:128',
+            'symbol' => 'required|max:128',
             'tag1' => 'required|max:5',
             'tag2' => 'required|max:5',
             'tag3' => 'required|max:5',
