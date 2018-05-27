@@ -16,12 +16,6 @@ class CreateTagsTable extends Migration
         Schema::create('tags', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('place');  // 配置場所
-            $table->string('symbol'); // 請求記号
-            $table->integer('tag1');
-            $table->integer('tag2');
-            $table->integer('tag3');
-            $table->timestamps();
         });
     }
 
