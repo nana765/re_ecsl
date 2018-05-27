@@ -1,16 +1,22 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+Route::view('/', 'index');
+Route::view('/register', 'register');
 
-Route::resource('/', 'ecslController', ['only' => [
-    'index', 'show','create', 'store'
+Route::resource('/register/book', 'BookController', ['only' => [
+    'create', 'store'
 ]]);
+
+Route::resource('/register/tag', 'TagController', ['only' => [
+    'create', 'store'
+]]);
+
+Route::resource('/admin/book', 'BookController', ['only' => [
+    'index', 'show', 'delete'
+]]);
+Route::patch('admin/book/admit/{id}', 'BookController@admit');
+
+Route::resource('/admin/tag', 'TagController', ['only' => [
+    'index', 'show', 'delete'
+]]);
+Route::patch('admin/tag/admit/{id}', 'TagController@admit');
