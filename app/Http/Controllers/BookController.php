@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Book;
+use App\Tag;
 use Validator;
 
 class BookController extends Controller
@@ -21,7 +22,8 @@ class BookController extends Controller
 
     public function register()
     {
-        return view('book.register');
+        $tags = Tag::all();
+        return view('book.register',compact('tags'));
     }
 
     public function store(Request $request)

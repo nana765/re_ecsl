@@ -33,18 +33,32 @@
     <input type="text" name="symbol" class="form-control" id="symbol">
   </div>
   <div class="form-group">
-    <label for="tag1">tag1</label>
-    <input type="text" name="tag1" class="form-control" id="tag1">
+    <label>tag1</label>
+    <select class="selectpicker form-control" name="tag1">
+      <option value="0">タグを登録しない</option>
+      @foreach ($tags as $tag)
+          <option value="{{ $tag->id }}">{{ $tag->name }}</option>
+      @endforeach
+    </select>
   </div>
   <div class="form-group">
-    <label for="tag2">tag2</label>
-    <input type="text" name="tag2" class="form-control" id="tag2">
+    <label>tag2</label>
+    <select class="selectpicker form-control" name="tag2">
+      <option value="0">タグを登録しない</option>
+      @foreach ($tags as $tag)
+          <option value="{{ $tag->id }}">{{ $tag->name }}</option>
+      @endforeach
+    </select>
   </div>
   <div class="form-group">
-    <label for="tag3">tag3</label>
-    <input type="text" name="tag3" class="form-control" id="tag3">
+    <label>tag3</label>
+    <select class="selectpicker form-control" name="tag3">
+      <option value="0">タグを登録しない</option>
+      @foreach ($tags as $tag)
+          <option value="{{ $tag->id }}">{{ $tag->name }}</option>
+      @endforeach
+    </select>
   </div>
-  <div>
   <button type="submit" class="mt-20 btn btn-primary">登録</button>
 </div>
 
