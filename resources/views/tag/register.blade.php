@@ -22,7 +22,7 @@
     <label for="tag">タグ名</label>
     <input type="text" name="tag" class="form-control" id="tag">
   </div>
-  <button type="submit" class="mt-20 btn btn-primary">登録</button>
+  <button type="submit" class="mt-20 btn btn-primary">申請</button>
 </div>
 
 @endsection
