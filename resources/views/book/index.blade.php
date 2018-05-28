@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('title', 'ECSL - 図書検索')
 @section('content')
-    <div class="container pt-30">
+    <div class="container" style="padding-top: 60px;">
         <form method="get">
             <div class="form-group">
                 <label for="search">書籍検索</label>

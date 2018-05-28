@@ -1,17 +1,23 @@
 @extends('layouts.main')
 @section('title', 'ECSL - 図書検索')
 @section('content')
-    <div class="container pt-30">
+    <div class="container">
         <form method="get">
-            <div class="form-group">
-                <label for="search">書籍検索</label>
-                <input type="text" name="keyword" class="form-control" id="search" placeholder="書籍名">
-                <button style="float: right;
-        margin: 30px 0;"type="submit" class="text-right btn btn-primary">検索</button>
+            <div class="row">
+                <div class="col-xs-3" style="width:95%; margin:auto;padding-top:70px;">
+                    <div class="form-group">
+                    <select class="selectpicker form-control" name="tag_id">
+                        <option value="">タグを選択して下さい</option>
+                        @foreach ($tags as $tag)
+                            <option value="{{ $tag->id }}">{{ $tag->name }}</option>
+                        @endforeach
+                    </select>
+                    </div>
+                </div>
             </div>
+            <button style="float:right;margin:30px 0;"type="submit" class="text-right btn btn-primary">検索</button>
         </form>
     </div>
-
     <div class="container">
         <table class="table col-xs-3">
             <thead>

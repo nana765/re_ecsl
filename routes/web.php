@@ -4,6 +4,7 @@ Route::view('/', 'index');
 Route::view('/register', 'register');
 
 Route::get('/book', 'BookController@index');
+Route::get('/tag', 'TagController@index');
 Route::get('/register/book', 'BookController@register');
 Route::post('/register/book', 'BookController@store');
 

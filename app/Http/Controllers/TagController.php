@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Tag;
+use App\Book;
 use Validator;
 
 class TagController extends Controller
@@ -11,7 +12,12 @@ class TagController extends Controller
 
     public function index()
     {
-        //
+        $tags = Tag::all();
+        $books = Book::where('set',false)->paginate(15);;
+        if(empty($keyword)){
+            
+        }
+        return view('tag.index',compact('books','tags'));
     }
 
     public function register()
