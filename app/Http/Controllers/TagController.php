@@ -10,12 +10,13 @@ use Validator;
 class TagController extends Controller
 {
 
-    public function index()
+    public function index(Request $request)
     {
         $tags = Tag::all();
-        $books = Book::where('set',false)->paginate(15);;
-        if(empty($keyword)){
-            
+        $tag_id = $request->input('tag_id');
+        $books = Book::where('set',false)->paginate(15);
+        if(!empty($tag_id)){
+            $books = Book::where('tag1' , $tag_id)->orWhere('tag2' , $tag_id)->orWhere('tag3' , $tag_id)->paginate(15);
         }
         return view('tag.index',compact('books','tags'));
     }

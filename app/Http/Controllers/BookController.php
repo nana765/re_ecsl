@@ -12,7 +12,6 @@ class BookController extends Controller
 
     public function index(Request $request)
     {
-        $tag_id = $request->input('tag_id');
         $books = Book::where('set',false)->paginate(15);;
         if(empty($keyword)){
             
