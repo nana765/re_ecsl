@@ -9,7 +9,7 @@
 ```
 　　composer install
 ```
-  1. .envを作る
+  2. .envを作る
 
   デフォルトで入っている`.env.examle`を`.env`に変える。
 ```
@@ -48,12 +48,7 @@ DB_DATABASE=データベース名
 DB_USERNAME=ユーザー名
 DB_PASSWORD=ユーザー名のパスワード
 ```
-### 3. .datebase.phpの変更
-```
-'database' => env('DB_DATABASE', 'ecsl'),
-'username' => env('DB_USERNAME', 'ecsl'),
-'password' => env('DB_PASSWORD', 'pass'),
-```
+
 ## テーブル作成
 ### 1. テーブル作成用のマイグレーションファイルを作成　(database/migrationsの中に作られる)
 ```
