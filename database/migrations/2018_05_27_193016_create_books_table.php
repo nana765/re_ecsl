@@ -21,6 +21,7 @@ class CreateBooksTable extends Migration
             $table->integer('tag1');
             $table->integer('tag2');
             $table->integer('tag3');
+            $table->bigInteger('isbn');
             $table->boolean('set')->default(false); // trueのみ表示
             $table->timestamps();
         });
