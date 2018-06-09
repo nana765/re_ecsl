@@ -73,3 +73,12 @@ public function boot()
     Schema::defaultStringLength(191);
 }
 ```
+
+```
+vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesAndRegistersUsers.php
+public function username()
+    {
+        return 'email';
+    }
+を変更
+```
