@@ -20,6 +20,7 @@ Route::resource('/admin/tag', 'TagController', ['only' => [
     'index', 'show', 'delete'
 ]]);
 Route::patch('admin/tag/admit/{id}', 'TagController@admit');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
