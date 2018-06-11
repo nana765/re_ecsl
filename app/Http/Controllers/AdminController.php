@@ -25,6 +25,8 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin.index');
+        $book_num = Book::where('set',false).count();
+        $tag_num = Tag::where('set',false).count();
+        return view('admin.index',compact('book_num','book_num'));
     }
 }
