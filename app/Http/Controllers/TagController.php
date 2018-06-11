@@ -54,11 +54,6 @@ class TagController extends Controller
         //
     }
 
-    public function admit(Request $request, $id)
-    {
-        //
-    }
-
     public function destroy($id)
     {
         //

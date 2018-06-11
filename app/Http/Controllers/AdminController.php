@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Book;
+use App\Tag;
 
 class AdminController extends Controller
 {
@@ -23,6 +25,6 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin');
+        return view('admin.index');
     }
 }

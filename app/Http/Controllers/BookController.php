@@ -12,7 +12,7 @@ class BookController extends Controller
 
     public function index(Request $request)
     {
-        $books = Book::where('set',false)->paginate(15);;
+        $books = Book::where('set',false)->paginate(10);
         if(empty($keyword)){
             
         }
@@ -60,11 +60,6 @@ class BookController extends Controller
     }
 
     public function edit($id)
-    {
-        //
-    }
-
-    public function admit(Request $request, $id)
     {
         //
     }
