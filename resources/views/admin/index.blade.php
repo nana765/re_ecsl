@@ -6,6 +6,7 @@
             <a href="{!! action('BookController@register') !!}">
                 <button type="button" class="btn btn-secondary btn-lg btn-block" style="margin-top:300px">
                     図書申請
+                    <span>{{$book_num}}件</span>
                 </button>
             </a>
         </div>
@@ -13,6 +14,7 @@
             <a href="{!! action('TagController@register') !!}">
                 <button type="button" class="btn btn-secondary btn-lg btn-block" style="margin-top:300px">
                     タグ申請
+                    <span>{{$tag_num}}件</span>
                 </button>
             </a>
         </div>
