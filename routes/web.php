@@ -7,7 +7,7 @@ Route::get('/register/book', 'BookController@register');
 Route::post('/register/book', 'BookController@store');
 Route::get('/register/tag', 'TagController@register');
 Route::post('/register/tag', 'TagController@store');
-Route::resource('/admin', 'AdminController', ['except' => [
-    'show'
-]]);
+Route::get('/admin', 'AdminController@index');
+Route::resource('/admin/book', 'AdminbookController');
+Route::resource('/admin/tag', 'AdmintagController');
 Auth::routes();
