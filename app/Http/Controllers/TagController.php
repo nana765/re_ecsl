@@ -14,9 +14,9 @@ class TagController extends Controller
     {
         $tags = Tag::all();
         $tag_id = $request->input('tag_id');
-        $books = Book::where('set',false)->paginate(15);
+        $books = Book::where('set',false)->paginate(10);
         if(!empty($tag_id)){
-            $books = Book::where('tag1' , $tag_id)->orWhere('tag2' , $tag_id)->orWhere('tag3' , $tag_id)->paginate(15);
+            $books = Book::where('tag1' , $tag_id)->orWhere('tag2' , $tag_id)->orWhere('tag3' , $tag_id)->paginate(10);
         }
         return view('tag.index',compact('books','tags'));
     }
