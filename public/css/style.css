@@ -1,0 +1,11 @@
+.register_btn{
+    margin-top: 300px;
+}
+.text-center .pagination{
+    display:inline-flex;
+}
+@media screen and (max-width: 767px) { 
+    .register_btn{
+        margin-top: 150px;
+    }
+}
