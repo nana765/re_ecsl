@@ -31,7 +31,10 @@
                 @endforeach
             </tbody>
         </table>
-        {{ $books->links() }}
-
+    </div>
+    <div class="container">
+        <div class="text-center">
+            {{ $books->links() }}
+        </div>
     </div>
 @endsection
