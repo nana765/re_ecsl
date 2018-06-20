@@ -13,9 +13,10 @@ class BookController extends Controller
 
     public function index(Request $request)
     {
-        $books = Book::where('set',false)->paginate(15);;
-        if(empty($keyword)){
-
+        $books = Book::where('set',false)->paginate(10);
+        $keyword = $request->input('keyword');
+        if(!empty($keyword)){
+            $books = Book::where('name' , 'LIKE', "%$keyword%")->paginate(10);
         }
         return view('book.index',compact('books'));
     }
@@ -46,9 +47,9 @@ class BookController extends Controller
 
         $book = new Book();
         $book->name = $request->name;
-        $book->place = $request->place; //  配置場所
-        $book->symbol = $request->symbol; //  請求記号
-        $book->isbn = $request->isbn; //ISBNコード
+        $book->place = $request->place;
+        $book->symbol = $request->symbol;
+        $book->isbn = $request->isbn;
         $book->tag1 = $request->tag1;
         $book->tag2 = $request->tag2;
         $book->tag3 = $request->tag3;
@@ -63,11 +64,6 @@ class BookController extends Controller
     }
 
     public function edit($id)
-    {
-        //
-    }
-
-    public function admit(Request $request, $id)
     {
         //
     }

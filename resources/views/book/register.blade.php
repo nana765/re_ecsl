@@ -67,6 +67,10 @@
     <span class="text-danger">{{$errors->first('isbn')}}</span>
   </div>
   <div class="form-group">
+    <label for="isbn">ISBN</label>
+    <input type="text" name="isbn" class="form-control" id="isbn">
+  </div>
+  <div class="form-group">
     <label>tag1</label>
     <select class="selectpicker form-control" name="tag1">
       <option value="0">タグを登録しない</option>
