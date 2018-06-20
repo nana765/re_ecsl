@@ -33,7 +33,7 @@ class BookController extends Controller
             'name' => 'required|max:128',
             'place' => 'required|max:128',
             'symbol' => 'required|max:128',
-            'isbn' =>'required|unique:books,isbn|digits:13,isbn|digits:10',
+            'isbn' =>'required|unique:books|digits:13',
             'tag1' => 'required|max:5',
             'tag2' => 'required|max:5',
             'tag3' => 'required|max:5',
