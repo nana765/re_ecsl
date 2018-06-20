@@ -29,7 +29,7 @@ class TagController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'tag' => 'required|max:128',
+            'tag' => 'required|unique:tags,name|max:128',
         ]);
 
         if ($validator->fails()) {

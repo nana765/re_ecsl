@@ -18,9 +18,19 @@
 
 <div class="container pt-50">
   {!! Form::open(['url' => 'register/tag']) !!}
+  <!--バリデーションエラー表示-->
+  @if (count($errors) > 0)
+  <!-- フォームのエラーリスト -->
+  <div class="alert alert-danger">
+    <strong>入力情報に間違いがあるようです</strong>
+    <br>
+  </div>
+  @endif
+
   <div class="form-group">
     <label for="tag">タグ名</label>
     <input type="text" name="tag" class="form-control" id="tag">
+    <span class="text-danger">{{$errors->first('tag')}}</span>
   </div>
   <button type="submit" class="mt-20 btn btn-primary">申請</button>
 </div>

@@ -1,6 +1,7 @@
 @extends('layouts.main')
 
 @section('title', 'ECSL 図書登録')
+
 <style>
 
 .pt-50{
@@ -14,6 +15,7 @@
 }
 </style>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 @section('content')
 
 <div class="container pt-50">
@@ -26,6 +28,7 @@
     <br>
   </div>
   @endif
+
   <div class="form-group @if($errors->first('name'))has-error @endif">
     <label for="exampleInputEmail1">書籍名</label>
     @if(old('confirming', 'false') === 'false')
@@ -36,6 +39,7 @@
     @endif
     <span class="text-danger">{{$errors->first('name')}}</span>
   </div>
+
   <div class="form-group @if($errors->first('place'))has-error @endif">
     <label for="place">配置場所</label>
     @if(old('confirming', 'false') === 'false')
@@ -46,6 +50,7 @@
     @endif
     <span class="text-danger">{{$errors->first('place')}}</span>
   </div>
+
   <div class="form-group @if($errors->first('symbol'))has-error @endif">
     <label for="symbol">請求記号</label>
     @if(old('confirming', 'false') === 'false')
@@ -56,8 +61,9 @@
     @endif
     <span class="text-danger">{{$errors->first('symbol')}}</span>
   </div>
+
   <div class="form-group @if($errors->first('isbn'))has-error @endif">
-    <label for="isbn">ISBNコード</label>
+    <label for="isbn">ISBN</label>
     @if(old('confirming', 'false') === 'false')
     <input type="text" class="form-control" name="isbn" value="{{ old('isbn') }}">
     @else
@@ -66,10 +72,7 @@
     @endif
     <span class="text-danger">{{$errors->first('isbn')}}</span>
   </div>
-  <div class="form-group">
-    <label for="isbn">ISBN</label>
-    <input type="text" name="isbn" class="form-control" id="isbn">
-  </div>
+
   <div class="form-group">
     <label>tag1</label>
     <select class="selectpicker form-control" name="tag1">
@@ -79,6 +82,7 @@
       @endforeach
     </select>
   </div>
+
   <div class="form-group">
     <label>tag2</label>
     <select class="selectpicker form-control" name="tag2">
@@ -88,6 +92,7 @@
       @endforeach
     </select>
   </div>
+
   <div class="form-group">
     <label>tag3</label>
     <select class="selectpicker form-control" name="tag3">
@@ -97,6 +102,7 @@
       @endforeach
     </select>
   </div>
+
   <button type="submit" class="mt-20 btn btn-primary">申請</button>
 </div>
 
