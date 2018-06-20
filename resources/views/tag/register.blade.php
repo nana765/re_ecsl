@@ -22,7 +22,7 @@
   @if (count($errors) > 0)
   <!-- フォームのエラーリスト -->
   <div class="alert alert-danger">
-    <strong>入力情報に間違いがあるようです</strong>
+    <strong>すでに登録されています</strong>
     <br>
   </div>
   @endif
