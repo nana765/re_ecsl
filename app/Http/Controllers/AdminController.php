@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Book;
+use App\Tag;
 
-class HomeController extends Controller
+class AdminController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -23,6 +25,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('admin');
+        $book_num = Book::where('set',false)->count();
+        $tag_num = Tag::where('set',false)->count();
+        return view('admin.index',compact('book_num','tag_num'));
     }
 }

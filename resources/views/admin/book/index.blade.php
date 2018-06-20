@@ -22,19 +22,8 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($books as $book)
-                    <tr>
-                        <td class="first">{{ $book->name }}</td>
-                        <td>{{ $book->place }}</td>
-                        <td>{{ $book->symbol }}</td>
-                    </tr>
-                @endforeach
             </tbody>
         </table>
-    </div>
-    <div class="container">
-        <div class="text-center">
-            {{ $books->links() }}
-        </div>
+
     </div>
 @endsection
