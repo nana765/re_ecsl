@@ -18,13 +18,11 @@
 
 <div class="container pt-50">
   {!! Form::open(['url' => 'register/tag']) !!}
-  <!--バリデーションエラー表示-->
+  
   @if (count($errors) > 0)
-  <!-- フォームのエラーリスト -->
-  <div class="alert alert-danger">
-    <strong>すでに登録されています</strong>
-    <br>
-  </div>
+      <div class="alert alert-danger">
+        <strong>すでに登録されています</strong>
+      </div>
   @endif
 
   <div class="form-group">
