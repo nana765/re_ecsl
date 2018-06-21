@@ -1,7 +1,6 @@
 @extends('layouts.main')
 
 @section('title', 'ECSL 図書登録')
-
 <style>
 
 .pt-50{
@@ -102,7 +101,6 @@
       @endforeach
     </select>
   </div>
-
   <button type="submit" class="mt-20 btn btn-primary">申請</button>
 </div>
 
